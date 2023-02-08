@@ -1,14 +1,14 @@
 
 body {
   margin: 0;
-  /*Separacions*/
+  /*Separaciones*/
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
+  background-color: rgb(219, 229, 229);
 }
 
 .navbar {
-  background: rgb(9, 75, 9);
-  background: linear-gradient(90deg, rgba(9, 75, 9, 1) 0%, rgba(3, 3, 66, 1) 76%, rgba(91, 12, 28, 1) 100%);
+  background: #000;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -19,9 +19,16 @@ body {
 
 .nav-logo {
   font-weight: bold;
-  font-size: 20px;
+  -webkit-text-stroke: 0.8px white;
+  font-size: 15px;
   margin: 15px;
-  color: white;
+  letter-spacing: 1px;
+  color: #fff0;
+  transition: 0.3s;
+}
+
+.nav-logo:hover{
+  color: #fff;
 }
 
 .nav-items a {
@@ -56,8 +63,7 @@ body {
     position: absolute;
     top: 60px;
     left: 0;
-    background: rgb(19, 4, 149);
-    background: linear-gradient(90deg, rgba(19, 4, 149, 1) 0%, rgba(92, 1, 20, 1) 100%);
+    background: #000;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -118,26 +124,53 @@ header .imagen-header{
   height: 100%;
 background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../ImagenesPagina/imagen\ 1.jpg');
 background-size: cover;
-background-attachment: fixed;
+background-attachment: stretch;
 background-position: center;
 display: flex;
 justify-content: center;
 align-items: center;
 }
 
-header .imagen-header H2{
+header .imagen-header h1{
   font-size: 4rem;
   font-weight: bold;
   color: white;
   text-align: center;
 }
 
+
+
 @media(min-width:594px){
     
-  header .imagen-header H2{
+  header .imagen-header h1{
     font-size: 3rem;
     font-weight: bold;
     color: white;
     text-align: center;
   }
 }
+
+@media(max-width:470){
+    
+  header .imagen-header h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+}
+
+/*letra en pantalla grande*/
+
+.about-us{
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.about-us-content{
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: justify;
+  font-size: 2rem;
+}
+
